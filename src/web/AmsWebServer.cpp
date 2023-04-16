@@ -18,6 +18,7 @@ void AmsWebServer::setup() {
 	server.on("/readdata.js", HTTP_GET, std::bind(&AmsWebServer::readdataJs, this)); 
 	server.on("/data.json", HTTP_GET, std::bind(&AmsWebServer::dataJson, this));
 	server.on("/log.txt", HTTP_GET, std::bind(&AmsWebServer::logTxt, this));
+	httpUpdater.setup(&server);
 	server.begin(); // Web server start
 }
 

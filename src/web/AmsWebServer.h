@@ -3,6 +3,7 @@
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
+#include <ESP8266HTTPUpdateServer.h>
 
 class AmsWebServer
 {
@@ -14,6 +15,7 @@ public:
 	void setDataJson(String str);
 private:
 	ESP8266WebServer server;
+	ESP8266HTTPUpdateServer httpUpdater;
 	void indexHtml();
 	void stylesCss();
 	void readdataJs();
